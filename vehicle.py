@@ -22,3 +22,8 @@ class Truck(Vehicle):
         super().__init__(make, model, year, rental_rate)
         self.bed_size = bed_size
         self.towing_capacity = towing_capacity
+
+class Motorcycle(Vehicle):
+    def __init__(self, make: str, model: str, year: int, rental_rate: int, engine_size: float):
+        super().__init__(make, model, year, rental_rate)
+        self.engine_size = engine_size
