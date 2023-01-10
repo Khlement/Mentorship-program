@@ -16,3 +16,9 @@ class Car(Vehicle):
         super().__init__(make, model, year, rental_rate)
         self.number_of_doors = number_of_doors
         self.seats = seats
+
+class Truck(Vehicle):
+    def __init__(self, make: str, model: str, year: int, rental_rate: int, bed_size: str, towing_capacity: int):
+        super().__init__(make, model, year, rental_rate)
+        self.bed_size = bed_size
+        self.towing_capacity = towing_capacity
