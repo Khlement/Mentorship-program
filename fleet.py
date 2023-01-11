@@ -3,29 +3,28 @@ class Fleet:
         self.name = name
         self.vehicles = []
 
-    def add_vehicle(self, vehicle):
+    def addVehicle(self, vehicle):
         self.vehicles.append(vehicle)
 
-    def remove_vehicle(self, vehicle):
+    def removeVehicle(self, vehicle):
         self.vehicles.remove(vehicle)
 
-    def list_vehicles(self):
-        for vehicle in self.vehicles:
-            print(vehicle)
+    def listVehicles(self):
+        print(self.vehicles)
 
-    def rent_vehicle(self, vehicle):
+    def rentVehicle(self, vehicle):
         if vehicle.available:
             vehicle.available = False
         else:
-            print("Sorry, this vehicle is currently rented.")
+            print("Vehicle currently out for rent.")
 
-    def return_vehicle(self, vehicle):
+    def returnVehicle(self, vehicle):
         if not vehicle.available:
             vehicle.available = True
         else:
-            print("This vehicle is not currently rented.")
+            print("This vehicle is not rented.")
 
-    def calculate_revenue(self):
+    def calculateRevenue(self):
         revenue = 0
         for vehicle in self.vehicles:
             if not vehicle.available:
